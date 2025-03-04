@@ -16,6 +16,7 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
+            text-align: center; /* Добавлено для центрирования текста в контейнере */
         }
         .logo {
             text-align: center;
@@ -26,13 +27,15 @@
         }
         .reviews-section {
             margin-bottom: 50px;
-            display: none; 
+            display: none;
+            text-align: center; /* Центрирование текста в секциях отзывов */
         }
         .review-links {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 20px;
             margin-top: 20px;
+            justify-content: center; /* Центрирование блоков отзывов */
         }
         .review-link {
             background: rgba(255, 255, 255, 0.1);
@@ -82,9 +85,9 @@
             <button onclick="switchLanguage('ru')" class="language-button active" id="ru-btn">RU</button>
             <button onclick="switchLanguage('en')" class="language-button" id="en-btn">EN</button>
         </div>
-        <div class="logo">
-            <img src="https://i.ibb.co/wNZTK2f0/gnb-logo-hotels.png" alt="Lotte Hotels Logo">
-        </div>
+       <header>
+	  <a href="https://ibb.co/yFT2vtY0"><img src="https://i.ibb.co/yFT2vtY0/Lotte-Corporation-Logo-wine.png" alt="Lotte-Corporation-Logo-wine" border="0"></a>		
+	   </header>
 
         <!-- Russian Version -->
         <div class="reviews-section" lang="ru">
@@ -129,7 +132,7 @@
 
     <script>
         switchLanguage('ru');
-		function switchLanguage(lang) {
+        function switchLanguage(lang) {
             document.getElementById('ru-btn').classList.toggle('active', lang === 'ru');
             document.getElementById('en-btn').classList.toggle('active', lang === 'en');
             document.querySelectorAll('.reviews-section').forEach(section => {
